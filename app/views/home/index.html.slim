@@ -1,12 +1,24 @@
 div id='game'
   .screen id='splash-screen'
-    h1 class="logo"
+    h1 class="logo" id="main-menu"
       | Jewel
       ==>
       | Warrior
-    span class="continue"
-      | Click to continue
-
+    / span class="continue"
+    /   | Click to continue
+    ul class="menu"
+      li
+        button name="game-screen"
+          | Play
+      li
+        button name="high-scores"
+          | High Scores
+      li
+        button name="about"
+          | About
+      li
+        button name="exit-screen"
+          | Exit
   .screen id='main-menu'
 
   .screen id='game-screen'

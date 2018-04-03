@@ -15,6 +15,8 @@
 //= require jquery_ujs
 //= require jewel
 //= require dom
+//= require screen.splash
+//= require screen.main-menu
 //= require index
 //= require turbolinks
 //= require_tree .
