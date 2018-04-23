@@ -49,10 +49,10 @@ var jewel = (function () {
     image.src = src;
 
   }
-  function setup(){
-    console.log("Success!");
-    jewel.showScreen("splash-screen");
-  }
+  // function setup(){
+  //   console.log("Success!");
+  //   jewel.showScreen("splash-screen");
+  // }
   //hide the active screen (if any) and show the screen
   //with the specified id
   function showScreen(screenId) {
@@ -72,12 +72,36 @@ var jewel = (function () {
     //run the screen module
     jewel.screens[screenId].run();
   }
+
+  // function isStandalone() {
+  //   return (window.navigator.standalone !== false);
+  // }
+
+  function setup() {
+    console.log("Success!");
+    jewel.showScreen("splash-screen");
+    // if (isStandalone()) {
+    //   showScreen("splash-screen");
+    // } else {
+    //   showScreen("install-screen");
+    // }
+  }
+
+  var settings = {
+    rows: 8,
+    cols: 8,
+    baseScore: 100,
+    numJewelTypes: 7
+  };
+
   //expose public methods
   return {
     load : load,
     setup : setup,
     showScreen : showScreen,
-    screens : {}
+    screens : {},
+    settings : settings
+    // isStandalone : isStandalone
   };
 
 

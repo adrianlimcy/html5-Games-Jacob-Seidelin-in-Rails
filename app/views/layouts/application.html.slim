@@ -7,7 +7,9 @@ html
 
     == stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     == javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    / == stylesheet_link_tag "mobile", media: "screen and (max-device-width: 768px) and (orientation: portrait), screen and (max-device-width: 1024px) and (orientation: landscape)"
     meta name="viewport" content="width=device-width, user-scalable=no"
+    / meta name="apple-mobile-web-app-capable" content="yes"
 
   body
     == yield
